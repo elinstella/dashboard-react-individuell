@@ -18,7 +18,7 @@ function Dashboard() {
   ];
 
   return (
-    <>
+    <main className='p-3'>
       <h1 className='text-xl bg-blue-300'>Dashboard</h1>
 
       {console.log(mockData)}
@@ -49,7 +49,7 @@ function Dashboard() {
           </ul>
         </div>
       ))}
-    </>
+    </main>
   );
 }
 

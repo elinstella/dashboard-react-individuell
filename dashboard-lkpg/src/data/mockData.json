@@ -6,20 +6,20 @@
       "email": "alex.johnson@example.com",
       "profilePicture": "https://example.com/user1-profile.jpg",
       "location": "Stockholm, Sweden",
-      "monthlyStreams": {
-        "January": 120,
-        "February": 110,
-        "March": 95,
-        "April": 135,
-        "May": 150,
-        "June": 125,
-        "July": 160,
-        "August": 175,
-        "September": 180,
-        "October": 200,
-        "November": 195,
-        "December": 210
-      },
+      "monthlyStreams": [
+        { "month": "January", "streams": 120 },
+        { "month": "February", "streams": 110 },
+        { "month": "March", "streams": 95 },
+        { "month": "April", "streams": 135 },
+        { "month": "May", "streams": 150 },
+        { "month": "June", "streams": 125 },
+        { "month": "July", "streams": 160 },
+        { "month": "August", "streams": 175 },
+        { "month": "September", "streams": 180 },
+        { "month": "October", "streams": 200 },
+        { "month": "November", "streams": 195 },
+        { "month": "December", "streams": 210 }
+      ],
       "topSongs": [
         { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 500 },
         { "song": "Levitating", "artist": "Dua Lipa", "streams": 450 },
@@ -59,20 +59,20 @@
       "email": "emma.svensson@example.com",
       "profilePicture": "https://example.com/user2-profile.jpg",
       "location": "Gothenburg, Sweden",
-      "monthlyStreams": {
-        "January": 140,
-        "February": 130,
-        "March": 120,
-        "April": 150,
-        "May": 170,
-        "June": 160,
-        "July": 180,
-        "August": 190,
-        "September": 210,
-        "October": 220,
-        "November": 210,
-        "December": 230
-      },
+      "monthlyStreams": [
+        { "month": "January", "streams": 140 },
+        { "month": "February", "streams": 130 },
+        { "month": "March", "streams": 120 },
+        { "month": "April", "streams": 150 },
+        { "month": "May", "streams": 170 },
+        { "month": "June", "streams": 160 },
+        { "month": "July", "streams": 180 },
+        { "month": "August", "streams": 190 },
+        { "month": "September", "streams": 210 },
+        { "month": "October", "streams": 220 },
+        { "month": "November", "streams": 210 },
+        { "month": "December", "streams": 230 }
+      ],
       "topSongs": [
         { "song": "Levitating", "artist": "Dua Lipa", "streams": 600 },
         { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 580 },
@@ -112,20 +112,20 @@
       "email": "lucas.bergstrom@example.com",
       "profilePicture": "https://example.com/user3-profile.jpg",
       "location": "Malmö, Sweden",
-      "monthlyStreams": {
-        "January": 95,
-        "February": 105,
-        "March": 100,
-        "April": 125,
-        "May": 140,
-        "June": 115,
-        "July": 130,
-        "August": 145,
-        "September": 150,
-        "October": 160,
-        "November": 170,
-        "December": 180
-      },
+      "monthlyStreams": [
+        { "month": "January", "streams": 95 },
+        { "month": "February", "streams": 105 },
+        { "month": "March", "streams": 100 },
+        { "month": "April", "streams": 125 },
+        { "month": "May", "streams": 140 },
+        { "month": "June", "streams": 115 },
+        { "month": "July", "streams": 130 },
+        { "month": "August", "streams": 145 },
+        { "month": "September", "streams": 150 },
+        { "month": "October", "streams": 160 },
+        { "month": "November", "streams": 170 },
+        { "month": "December", "streams": 180 }
+      ],
       "topSongs": [
         { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 480 },
         { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 460 },
@@ -165,20 +165,20 @@
       "email": "nina.andersson@example.com",
       "profilePicture": "https://example.com/user4-profile.jpg",
       "location": "Uppsala, Sweden",
-      "monthlyStreams": {
-        "January": 160,
-        "February": 150,
-        "March": 140,
-        "April": 175,
-        "May": 180,
-        "June": 190,
-        "July": 210,
-        "August": 220,
-        "September": 240,
-        "October": 250,
-        "November": 230,
-        "December": 240
-      },
+      "monthlyStreams": [
+        { "month": "January", "streams": 160 },
+        { "month": "February", "streams": 150 },
+        { "month": "March", "streams": 140 },
+        { "month": "April", "streams": 175 },
+        { "month": "May", "streams": 180 },
+        { "month": "June", "streams": 190 },
+        { "month": "July", "streams": 210 },
+        { "month": "August", "streams": 220 },
+        { "month": "September", "streams": 240 },
+        { "month": "October", "streams": 250 },
+        { "month": "November", "streams": 230 },
+        { "month": "December", "streams": 240 }
+      ],
       "topSongs": [
         { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 700 },
         { "song": "Levitating", "artist": "Dua Lipa", "streams": 680 },
@@ -214,532 +214,204 @@
     },
     {
       "id": 5,
-      "name": "Oscar Johansson",
-      "email": "oscar.johansson@example.com",
+      "name": "Lina Eriksson",
+      "email": "lina.eriksson@example.com",
       "profilePicture": "https://example.com/user5-profile.jpg",
-      "location": "Linköping, Sweden",
-      "monthlyStreams": {
-        "January": 110,
-        "February": 120,
-        "March": 115,
-        "April": 130,
-        "May": 140,
-        "June": 135,
-        "July": 150,
-        "August": 155,
-        "September": 160,
-        "October": 170,
-        "November": 165,
-        "December": 180
-      },
+      "location": "Helsingborg, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 180 },
+        { "month": "February", "streams": 170 },
+        { "month": "March", "streams": 160 },
+        { "month": "April", "streams": 190 },
+        { "month": "May", "streams": 200 },
+        { "month": "June", "streams": 210 },
+        { "month": "July", "streams": 220 },
+        { "month": "August", "streams": 230 },
+        { "month": "September", "streams": 240 },
+        { "month": "October", "streams": 250 },
+        { "month": "November", "streams": 230 },
+        { "month": "December", "streams": 220 }
+      ],
       "topSongs": [
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 500 },
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 490 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 470 },
         {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 460
+          "song": "Stay",
+          "artist": "The Kid LAROI, Justin Bieber",
+          "streams": 670
         },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 450 },
+        { "song": "Shivers", "artist": "Ed Sheeran", "streams": 650 },
         {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 430
+          "song": "Kiss Me More",
+          "artist": "Doja Cat ft. SZA",
+          "streams": 630
         },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 420 },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 400
-        },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 390
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 380
-        }
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 620 },
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 600 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 580 }
       ]
     },
     {
       "id": 6,
-      "name": "Lena Nilsson",
-      "email": "lena.nilsson@example.com",
+      "name": "Oscar Nilsson",
+      "email": "oscar.nilsson@example.com",
       "profilePicture": "https://example.com/user6-profile.jpg",
-      "location": "Västerås, Sweden",
-      "monthlyStreams": {
-        "January": 130,
-        "February": 120,
-        "March": 110,
-        "April": 140,
-        "May": 160,
-        "June": 155,
-        "July": 170,
-        "August": 180,
-        "September": 190,
-        "October": 210,
-        "November": 200,
-        "December": 220
-      },
+      "location": "Lund, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 135 },
+        { "month": "February", "streams": 125 },
+        { "month": "March", "streams": 115 },
+        { "month": "April", "streams": 145 },
+        { "month": "May", "streams": 155 },
+        { "month": "June", "streams": 165 },
+        { "month": "July", "streams": 170 },
+        { "month": "August", "streams": 180 },
+        { "month": "September", "streams": 190 },
+        { "month": "October", "streams": 200 },
+        { "month": "November", "streams": 210 },
+        { "month": "December", "streams": 215 }
+      ],
       "topSongs": [
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 540 },
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 520 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 510 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 495 },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 470
-        },
+        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 700 },
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 680 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 670 },
+        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 650 },
         {
           "song": "Peaches",
           "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 450
+          "streams": 640
         },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 440 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 430
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 420
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 410
-        }
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 630 }
       ]
     },
     {
       "id": 7,
-      "name": "Sara Eriksson",
-      "email": "sara.eriksson@example.com",
+      "name": "Fredrik Karlsson",
+      "email": "fredrik.karlsson@example.com",
       "profilePicture": "https://example.com/user7-profile.jpg",
-      "location": "Östersund, Sweden",
-      "monthlyStreams": {
-        "January": 100,
-        "February": 110,
-        "March": 115,
-        "April": 120,
-        "May": 130,
-        "June": 140,
-        "July": 150,
-        "August": 165,
-        "September": 175,
-        "October": 180,
-        "November": 190,
-        "December": 200
-      },
+      "location": "Västerås, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 110 },
+        { "month": "February", "streams": 120 },
+        { "month": "March", "streams": 130 },
+        { "month": "April", "streams": 140 },
+        { "month": "May", "streams": 160 },
+        { "month": "June", "streams": 155 },
+        { "month": "July", "streams": 165 },
+        { "month": "August", "streams": 175 },
+        { "month": "September", "streams": 185 },
+        { "month": "October", "streams": 190 },
+        { "month": "November", "streams": 195 },
+        { "month": "December", "streams": 210 }
+      ],
       "topSongs": [
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 460 },
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 445 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 430 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 420
-        },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 400 },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 380 },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 370
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 360
-        },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 350
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 340
-        }
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 550 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 530 },
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 510 },
+        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 490 },
+        { "song": "Shivers", "artist": "Ed Sheeran", "streams": 470 },
+        { "song": "Kiss Me More", "artist": "Doja Cat ft. SZA", "streams": 460 }
       ]
     },
     {
       "id": 8,
-      "name": "Maximilian Lindgren",
-      "email": "maximilian.lindgren@example.com",
+      "name": "Sofia Larsson",
+      "email": "sofia.larsson@example.com",
       "profilePicture": "https://example.com/user8-profile.jpg",
-      "location": "Karlstad, Sweden",
-      "monthlyStreams": {
-        "January": 150,
-        "February": 140,
-        "March": 135,
-        "April": 160,
-        "May": 180,
-        "June": 175,
-        "July": 190,
-        "August": 200,
-        "September": 210,
-        "October": 230,
-        "November": 220,
-        "December": 240
-      },
+      "location": "Umeå, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 190 },
+        { "month": "February", "streams": 180 },
+        { "month": "March", "streams": 170 },
+        { "month": "April", "streams": 200 },
+        { "month": "May", "streams": 210 },
+        { "month": "June", "streams": 220 },
+        { "month": "July", "streams": 230 },
+        { "month": "August", "streams": 240 },
+        { "month": "September", "streams": 250 },
+        { "month": "October", "streams": 260 },
+        { "month": "November", "streams": 250 },
+        { "month": "December", "streams": 240 }
+      ],
       "topSongs": [
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 600 },
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 590 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 570 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 550 },
         {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 530
+          "song": "Montero (Call Me By Your Name)",
+          "artist": "Lil Nas X",
+          "streams": 720
         },
         {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 510
+          "song": "Stay",
+          "artist": "The Kid LAROI, Justin Bieber",
+          "streams": 700
         },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 500 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 490
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 480
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 470
-        }
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 690 },
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 680 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 670 },
+        { "song": "Kiss Me More", "artist": "Doja Cat ft. SZA", "streams": 660 }
       ]
     },
     {
       "id": 9,
-      "name": "Johanna Lindqvist",
-      "email": "johanna.lindqvist@example.com",
+      "name": "Max Olsson",
+      "email": "max.olsson@example.com",
       "profilePicture": "https://example.com/user9-profile.jpg",
-      "location": "Norrköping, Sweden",
-      "monthlyStreams": {
-        "January": 120,
-        "February": 130,
-        "March": 125,
-        "April": 140,
-        "May": 160,
-        "June": 150,
-        "July": 170,
-        "August": 180,
-        "September": 190,
-        "October": 200,
-        "November": 210,
-        "December": 220
-      },
+      "location": "Östersund, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 140 },
+        { "month": "February", "streams": 130 },
+        { "month": "March", "streams": 120 },
+        { "month": "April", "streams": 150 },
+        { "month": "May", "streams": 160 },
+        { "month": "June", "streams": 170 },
+        { "month": "July", "streams": 180 },
+        { "month": "August", "streams": 190 },
+        { "month": "September", "streams": 200 },
+        { "month": "October", "streams": 210 },
+        { "month": "November", "streams": 220 },
+        { "month": "December", "streams": 230 }
+      ],
       "topSongs": [
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 550 },
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 530 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 510 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 500 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 490
-        },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 470 },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 460
-        },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 450
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 440
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 430
-        }
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 580 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 570 },
+        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 550 },
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 540 },
+        { "song": "Shivers", "artist": "Ed Sheeran", "streams": 520 },
+        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 510 }
       ]
     },
     {
       "id": 10,
-      "name": "Henrik Persson",
-      "email": "henrik.persson@example.com",
+      "name": "Ella Jönsson",
+      "email": "ella.jonsson@example.com",
       "profilePicture": "https://example.com/user10-profile.jpg",
-      "location": "Växjö, Sweden",
-      "monthlyStreams": {
-        "January": 110,
-        "February": 120,
-        "March": 115,
-        "April": 130,
-        "May": 150,
-        "June": 140,
-        "July": 160,
-        "August": 170,
-        "September": 180,
-        "October": 190,
-        "November": 200,
-        "December": 210
-      },
+      "location": "Kiruna, Sweden",
+      "monthlyStreams": [
+        { "month": "January", "streams": 170 },
+        { "month": "February", "streams": 160 },
+        { "month": "March", "streams": 150 },
+        { "month": "April", "streams": 180 },
+        { "month": "May", "streams": 190 },
+        { "month": "June", "streams": 200 },
+        { "month": "July", "streams": 210 },
+        { "month": "August", "streams": 220 },
+        { "month": "September", "streams": 230 },
+        { "month": "October", "streams": 240 },
+        { "month": "November", "streams": 235 },
+        { "month": "December", "streams": 230 }
+      ],
       "topSongs": [
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 500 },
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 490 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 475 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 460 },
         {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 450
+          "song": "Stay",
+          "artist": "The Kid LAROI, Justin Bieber",
+          "streams": 710
         },
+        { "song": "Levitating", "artist": "Dua Lipa", "streams": 690 },
+        { "song": "Good 4 U", "artist": "Olivia Rodrigo", "streams": 680 },
+        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 670 },
         {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 440
+          "song": "Kiss Me More",
+          "artist": "Doja Cat ft. SZA",
+          "streams": 660
         },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 430 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 420
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 410
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 400
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "name": "Freja Karlsson",
-      "email": "freja.karlsson@example.com",
-      "profilePicture": "https://example.com/user11-profile.jpg",
-      "location": "Helsingborg, Sweden",
-      "monthlyStreams": {
-        "January": 140,
-        "February": 130,
-        "March": 125,
-        "April": 145,
-        "May": 160,
-        "June": 155,
-        "July": 175,
-        "August": 185,
-        "September": 200,
-        "October": 210,
-        "November": 220,
-        "December": 230
-      },
-      "topSongs": [
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 600 },
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 590 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 570 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 550 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 540
-        },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 520
-        },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 510 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 500
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 490
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 480
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "name": "Alva Nilsson",
-      "email": "alva.nilsson@example.com",
-      "profilePicture": "https://example.com/user12-profile.jpg",
-      "location": "Östersund, Sweden",
-      "monthlyStreams": {
-        "January": 125,
-        "February": 135,
-        "March": 130,
-        "April": 150,
-        "May": 160,
-        "June": 145,
-        "July": 170,
-        "August": 180,
-        "September": 190,
-        "October": 200,
-        "November": 210,
-        "December": 220
-      },
-      "topSongs": [
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 510 },
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 500 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 485 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 470 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 460
-        },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 450
-        },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 440 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 430
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 420
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 410
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "name": "Vera Lundberg",
-      "email": "vera.lundberg@example.com",
-      "profilePicture": "https://example.com/user13-profile.jpg",
-      "location": "Västerås, Sweden",
-      "monthlyStreams": {
-        "January": 100,
-        "February": 110,
-        "March": 115,
-        "April": 130,
-        "May": 140,
-        "June": 120,
-        "July": 150,
-        "August": 160,
-        "September": 170,
-        "October": 180,
-        "November": 190,
-        "December": 200
-      },
-      "topSongs": [
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 550 },
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 530 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 510 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 500 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 490
-        },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 480 },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 470
-        },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 460
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 450
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 440
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "name": "Maximilian Eriksson",
-      "email": "maximilian.eriksson@example.com",
-      "profilePicture": "https://example.com/user14-profile.jpg",
-      "location": "Karlstad, Sweden",
-      "monthlyStreams": {
-        "January": 115,
-        "February": 125,
-        "March": 120,
-        "April": 140,
-        "May": 155,
-        "June": 145,
-        "July": 165,
-        "August": 175,
-        "September": 185,
-        "October": 195,
-        "November": 205,
-        "December": 215
-      },
-      "topSongs": [
-        { "song": "Levitating", "artist": "Dua Lipa", "streams": 520 },
-        { "song": "Blinding Lights", "artist": "The Weeknd", "streams": 510 },
-        { "song": "Save Your Tears", "artist": "The Weeknd", "streams": 490 },
-        { "song": "Shape of You", "artist": "Ed Sheeran", "streams": 480 },
-        {
-          "song": "Peaches",
-          "artist": "Justin Bieber ft. Daniel Caesar, Giveon",
-          "streams": 470
-        },
-        {
-          "song": "Uptown Funk",
-          "artist": "Mark Ronson ft. Bruno Mars",
-          "streams": 460
-        },
-        { "song": "Bad Habits", "artist": "Ed Sheeran", "streams": 450 },
-        {
-          "song": "Levitating (Remix)",
-          "artist": "Dua Lipa ft. DaBaby",
-          "streams": 440
-        },
-        {
-          "song": "Blinding Lights (Remix)",
-          "artist": "The Weeknd ft. Rosalía",
-          "streams": 430
-        },
-        {
-          "song": "Summertime Sadness",
-          "artist": "Lana Del Rey",
-          "streams": 420
-        }
+        { "song": "Shivers", "artist": "Ed Sheeran", "streams": 650 }
       ]
     }
   ]

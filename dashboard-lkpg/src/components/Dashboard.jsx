@@ -1,54 +1,42 @@
 import mockData from '../data/mockData.json';
+import {
+  BarChart,
+  Bar,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+  Legend,
+} from 'recharts';
 
 function Dashboard() {
-  // List of months in order
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
+  // Ändra [0] => [2] t.ex för annan user
+  const userMusicStats = mockData.users[0];
 
   return (
     <main className='p-3'>
-      <h1 className='text-xl bg-blue-300'>Dashboard</h1>
+      <div>
+        <h1 className='text-4xl mb-4'>{userMusicStats.name}</h1>
+        <p>{userMusicStats.id}</p>
+        <p>{userMusicStats.email}</p>
+        <p>{userMusicStats.location}</p>
+        <p>{userMusicStats.profilePicture}</p>
+      </div>
 
-      {console.log(mockData)}
+      <div className='h-72'>
+        <p>Monthly streams this year</p>
+        <ResponsiveContainer width={'100%'} height={'100%'}>
+          <BarChart data={userMusicStats.monthlyStreams}>
+            <XAxis dataKey='month' />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey='streams' />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
 
-      {mockData.users.map((user, index) => (
-        <div>
-          <p>id: {user.id}</p>
-          <h2>{user.name}</h2>
-          <h3>{user.location}</h3>
-          <h3>{user.email}</h3>
-          <img src={user.profilePicture} alt='' />
-          <h4>Top songs:</h4>
-          <ul>
-            {user.topSongs.map((song, songIndex) => (
-              <li key={songIndex}>
-                {song.song} by {song.artist} (Streams: {song.streams})
-              </li>
-            ))}
-          </ul>
-
-          <h4>Monthly Stream</h4>
-          <ul>
-            {months.map((month, index) => (
-              <li key={index}>
-                {month}: {mockData.users[1].monthlyStreams[month]} streams
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      {console.log('asd asd ', userMusicStats)}
     </main>
   );
 }

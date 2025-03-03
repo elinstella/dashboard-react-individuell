@@ -24,7 +24,7 @@ function Dashboard() {
       </div>
 
       <div className='h-72'>
-        <p>Monthly streams this year</p>
+        <p>Monthly streams this year:</p>
         <ResponsiveContainer width={'100%'} height={'100%'}>
           <BarChart data={userMusicStats.monthlyStreams}>
             <XAxis dataKey='month' />

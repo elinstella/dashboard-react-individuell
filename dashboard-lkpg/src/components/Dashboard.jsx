@@ -36,6 +36,17 @@ function Dashboard() {
         </ResponsiveContainer>
       </div>
 
+      <div>
+        <h2 className='font-bold'>{userMusicStats.name} top songs:</h2>
+        {userMusicStats.topSongs.map((song) => (
+          <div>
+            <p>
+              {song.song} - {song.artist}
+            </p>
+            <p>Streams: {song.streams}</p>
+          </div>
+        ))}
+      </div>
       {console.log('asd asd ', userMusicStats)}
     </main>
   );

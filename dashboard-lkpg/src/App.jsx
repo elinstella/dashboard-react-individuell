@@ -8,10 +8,10 @@ import mockData from './data/mockData.json';
 function App() {
   return (
     <>
-    <UserLeaderboard usersData={mockData} />
       <NavHeader />
       <Dashboard />
-      <Footer /> 
+      <UserLeaderboard usersData={mockData} />
+      <Footer />
     </>
   );
 }

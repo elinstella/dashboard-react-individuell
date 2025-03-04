@@ -8,6 +8,7 @@ import {
   YAxis,
   Legend,
 } from 'recharts';
+import UserLeaderboard from './UserLeaderboard';
 
 function Dashboard() {
   // Ändra [0] => [2] t.ex för annan user
@@ -48,6 +49,7 @@ function Dashboard() {
         ))}
       </div>
       {console.log('asd asd ', userMusicStats)}
+      <UserLeaderboard />
     </main>
   );
 }

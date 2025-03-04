@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Alex Johnson",
       "email": "alex.johnson@example.com",
-      "profilePicture": "https://example.com/user1-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Stockholm, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 120 },
@@ -57,7 +57,7 @@
       "id": 2,
       "name": "Emma Svensson",
       "email": "emma.svensson@example.com",
-      "profilePicture": "https://example.com/user2-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Gothenburg, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 140 },
@@ -110,7 +110,7 @@
       "id": 3,
       "name": "Lucas Bergström",
       "email": "lucas.bergstrom@example.com",
-      "profilePicture": "https://example.com/user3-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Malmö, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 95 },
@@ -163,7 +163,7 @@
       "id": 4,
       "name": "Nina Andersson",
       "email": "nina.andersson@example.com",
-      "profilePicture": "https://example.com/user4-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Uppsala, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 160 },
@@ -216,7 +216,7 @@
       "id": 5,
       "name": "Lina Eriksson",
       "email": "lina.eriksson@example.com",
-      "profilePicture": "https://example.com/user5-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Helsingborg, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 180 },
@@ -253,7 +253,7 @@
       "id": 6,
       "name": "Oscar Nilsson",
       "email": "oscar.nilsson@example.com",
-      "profilePicture": "https://example.com/user6-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Lund, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 135 },
@@ -286,7 +286,7 @@
       "id": 7,
       "name": "Fredrik Karlsson",
       "email": "fredrik.karlsson@example.com",
-      "profilePicture": "https://example.com/user7-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Västerås, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 110 },
@@ -315,7 +315,7 @@
       "id": 8,
       "name": "Sofia Larsson",
       "email": "sofia.larsson@example.com",
-      "profilePicture": "https://example.com/user8-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Umeå, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 190 },
@@ -352,7 +352,7 @@
       "id": 9,
       "name": "Max Olsson",
       "email": "max.olsson@example.com",
-      "profilePicture": "https://example.com/user9-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Östersund, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 140 },
@@ -381,7 +381,7 @@
       "id": 10,
       "name": "Ella Jönsson",
       "email": "ella.jonsson@example.com",
-      "profilePicture": "https://example.com/user10-profile.jpg",
+      "profilePicture": "https://picsum.photos/500",
       "location": "Kiruna, Sweden",
       "monthlyStreams": [
         { "month": "January", "streams": 170 },

@@ -52,14 +52,18 @@ function Profiles() {
 
             <div className='mt-6'>
               <h2 className='text-2xl font-bold mb-4'>Monthly Streams</h2>
-              <div className='h-72'>
+              <div className='h-96'>
                 <ResponsiveContainer width='100%' height='100%'>
                   <BarChart data={user.monthlyStreams}>
-                    <XAxis dataKey='month' />
+                    <XAxis dataKey='month' className='text-sm' />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey='streams' fill='#4F46E5' />
+                    <Bar
+                      dataKey='streams'
+                      fill='#4F46E5'
+                      radius={[5, 5, 0, 0]}
+                    />
                   </BarChart>
                 </ResponsiveContainer>
               </div>

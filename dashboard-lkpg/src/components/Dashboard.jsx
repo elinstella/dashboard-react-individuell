@@ -9,13 +9,38 @@ import {
   Legend,
 } from 'recharts';
 import UserLeaderboard from './UserLeaderboard';
+import MenuUsers from './MenuUsers';
+import { useState } from 'react';
 
 function Dashboard() {
+  const [userMusicStats, setUserMusicStats] = useState(mockData.users[8]);
   // Ändra [8] => [2] t.ex för annan user
-  const userMusicStats = mockData.users[8];
+  // const userMusicStats = ;
+
+  function handleUserClick(userId) {
+    const selectedUser = mockData.users.find((user) => user.id === userId);
+    setUserMusicStats(selectedUser); // Update state to the clicked user
+  }
 
   return (
     <main className='p-6 max-w-6xl mx-auto bg-gray-100 min-h-screen'>
+      <div className='flex justify-center pb-16'>
+        <h2>Users:</h2>
+        <ul>
+          {mockData.users.map((user) => (
+            <li
+              className='cursor-pointer text-2xl'
+              key={user.id}
+              onClick={() => handleUserClick(user.id)}
+            >
+              {user.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Gaston dropdown menu */}
+
       <div className='flex gap-6'>
         {/* User info and Profile - vänster */}
         <div className='bg-white p-6 rounded-2xl shadow-md w-1/3 min-w-[250px]'>

@@ -11,7 +11,6 @@ import {
 import UserLeaderboard from './UserLeaderboard';
 
 function Dashboard() {
-  // Ändra [8] => [2] t.ex för annan user
   const userMusicStats = mockData.users[8];
 
   return (
@@ -19,7 +18,6 @@ function Dashboard() {
       <div className='max-w-8xl mx-auto bg-white p-6 border border-gray-300 rounded-xl'>
         <div className='flex flex-wrap sm:flex-nowrap gap-6'>
           
-          {/* User info and Profile - vänster */}
           <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] w-full sm:w-1/3 min-w-[250px]'>
             <h1 className='text-3xl font-bold mb-2 text-primary'>
               {userMusicStats.name}
@@ -34,7 +32,6 @@ function Dashboard() {
             />
           </div>
 
-          {/* Monthly streams - höger */}
           <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] w-full sm:w-2/3 min-w-[300px]'>
             <p className='text-lg font-semibold text-primary'>
               Monthly streams this year:
@@ -53,20 +50,16 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* UserLeaderboard och Top Songs bredvid varandra */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6'>
-          {/* UserLeaderboard - vänster */}
-          <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)]'>
+        <div className='grid grid-cols-1 sm:grid-cols-5 gap-6 mt-6'>
+          <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] sm:col-span-3'>
             <UserLeaderboard usersData={mockData} />
           </div>
 
-          {/* Top Songs - höger */}
-          <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] flex-1'>
+          <div className='bg-white p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] sm:col-span-2'>
             <h2 className='text-3xl font-semibold text-primary mb-4'>Top Songs</h2>
             <ul className='grid grid-cols-1 gap-4'>
               {userMusicStats.topSongs.map((song, index) => (
                 <li key={index} className='border-b last:border-b-0 py-3'>
-                  {/* Byt plats på färger */}
                   <p className='text-black font-medium'>
                     {song.song} - <span className='text-quaternary'>{song.artist}</span>
                   </p>

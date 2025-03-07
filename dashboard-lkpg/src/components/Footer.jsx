@@ -3,13 +3,12 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bg-gradient-custom text-white py-6 border-t border-quaternary">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <p className="text-sm text-center">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center">
+        <p className="text-sm text-center sm:text-left">
           Copyright 2025 BeatStats
         </p>
 
-        {/* Social media links or other footer content */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 mt-4 sm:mt-0">
           <a href="#" className="text-white hover:text-tertiary transition-all duration-300">
             <i className="fab fa-facebook"></i>
           </a>

@@ -13,32 +13,32 @@ import { useState } from 'react';
 
 function Dashboard() {
   const [userMusicStats, setUserMusicStats] = useState(mockData.users[8]);
-  // Ändra [8] => [2] t.ex för annan user
-  // const userMusicStats = ;
 
-  function handleUserClick(userId) {
-    const selectedUser = mockData.users.find((user) => user.id === userId);
-    setUserMusicStats(selectedUser); // Update state to the clicked user
-  }
+  // Function to handle user selection from the dropdown
+  const handleUserChange = (event) => {
+    const selectedUserId = parseInt(event.target.value);
+    const selectedUser = mockData.users.find(
+      (user) => user.id === selectedUserId
+    );
+    setUserMusicStats(selectedUser);
+  };
 
   return (
     <main className='p-6 max-w-6xl mx-auto bg-gray-100 min-h-screen'>
       <div className='flex justify-center pb-16'>
         <h2>Users:</h2>
-        <ul>
+        <select
+          className='cursor-pointer text-2xl'
+          onChange={handleUserChange}
+          value={userMusicStats.id}
+        >
           {mockData.users.map((user) => (
-            <li
-              className='cursor-pointer text-2xl'
-              key={user.id}
-              onClick={() => handleUserClick(user.id)}
-            >
+            <option key={user.id} value={user.id}>
               {user.name}
-            </li>
+            </option>
           ))}
-        </ul>
+        </select>
       </div>
-
-      {/* Gaston dropdown menu */}
 
       <div className='flex gap-6'>
         {/* User info and Profile - vänster */}

@@ -1,4 +1,5 @@
 import mockData from '../data/mockData.json';
+import { Link } from 'react-router-dom';
 import {
   BarChart,
   Bar,
@@ -43,8 +44,10 @@ function Dashboard() {
       <div className='flex gap-6'>
         {/* User info and Profile - vänster */}
         <div className='bg-white p-6 rounded-2xl shadow-md w-1/3 min-w-[250px]'>
-          <h1 className='text-3xl font-bold mb-2 text-gray-800'>
-            {userMusicStats.name}
+          <h1 className='text-3xl font-bold mb-2 text-gray-800 underline'>
+            <Link to={`/profiles/${userMusicStats.id}`}>
+              {userMusicStats.name}
+            </Link>
           </h1>
           <p className='text-gray-600 text-sm'>ID: {userMusicStats.id}</p>
           <p className='text-gray-600 text-sm'>Email: {userMusicStats.email}</p>

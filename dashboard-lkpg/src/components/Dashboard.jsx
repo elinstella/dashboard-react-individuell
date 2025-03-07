@@ -9,7 +9,6 @@ import {
   Legend,
 } from 'recharts';
 import UserLeaderboard from './UserLeaderboard';
-import MenuUsers from './MenuUsers';
 import { useState } from 'react';
 
 function Dashboard() {

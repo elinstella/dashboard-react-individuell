@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Profiles from './pages/Profiles';
 import AllProfiles from './pages/AllProfiles';
+import TopSongs from './pages/TopSongs';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/profiles',
     element: <AllProfiles />,
+  },
+  {
+    path: '/top-songs',
+    element: <TopSongs />,
   },
 ]);
 

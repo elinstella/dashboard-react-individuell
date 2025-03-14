@@ -28,11 +28,11 @@ export default function NavHeader() {
             </Link>
           </li>
           <li>
-            <a
-              href='#stats'
+            <Link
+              to='/top-songs'
               className='nav-link hover:text-tertiary hover:scale-110 transition-all duration-300 transform inline-block'>
-              Stats
-            </a>
+              Top Songs
+            </Link>
           </li>
           <li>
             <Link

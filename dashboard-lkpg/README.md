@@ -1,12 +1,29 @@
-# React + Vite
+# Musiklyssnarstatistik-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Den här applikationen gör det möjligt att visa statistik över en individs musiklyssning. Användare kan se data som exempelvis månatliga lyssnare, topplåtar, och andra relevanta musiklyssnarstatistik. Applikationen är utformad för att ge en översiktlig och interaktiv presentation av användarens musiklyssning.
 
-Currently, two official plugins are available:
+## Teknologier
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Ett populärt JavaScript-bibliotek för att bygga användargränssnitt, vilket gör applikationen dynamisk och interaktiv.
+- **Vite**: Ett modernt byggverktyg och utvecklingsserver som gör utvecklingsprocessen snabbare och mer effektiv.
+- **Tailwind CSS**: Ett utility-first CSS-ramverk som används för att skapa responsiva och anpassade användargränssnitt.
+- **Recharts**: Ett bibliotek för att skapa interaktiva och anpassningsbara diagram, som används för att visualisera användarens musikstatistik.
+- **React Router**: Ett bibliotek för att hantera routing i applikationen och navigera mellan olika sidor utan att behöva ladda om sidan.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+För att komma igång med projektet, följ dessa steg:
+
+1. **Klona detta repo**:
+
+
+2. **Installera beroenden**:
+    Se till att du har [Node.js](https://nodejs.org/) installerat på din dator. 
+    npm install
+
+
+3. **Starta utvecklingsservern**:
+    När installationen är klar kan du starta utvecklingsservern genom att köra:
+    npm run dev
+
+

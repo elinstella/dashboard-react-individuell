@@ -41,7 +41,7 @@ function Dashboard() {
         </select>
       </div>
 
-      <div className='flex gap-6'>
+      <div className='flex gap-6 flex-wrap md:flex-nowrap'>
         {/* User info and Profile - vänster */}
         <div className='bg-white p-6 rounded-2xl shadow-md w-1/3 min-w-[250px]'>
           <h1 className='text-3xl font-bold mb-2 text-gray-800 underline'>
@@ -80,7 +80,7 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className='flex gap-6 mt-6'>
+      <div className='flex gap-6 mt-6 flex-wrap md:flex-nowrap'>
         {/* UserLeaderboard - vänster */}
         <div className='bg-white p-6 rounded-2xl shadow-md w-2/3 min-w-[300px]'>
           <UserLeaderboard usersData={mockData} />

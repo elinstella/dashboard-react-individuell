@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
-
-:root {
+@theme {
   --color-primary: #4f46e5;
   --color-secondary: #6366f1;
   --color-tertiary: #7c3aed;
@@ -9,9 +8,14 @@
 }
 
 .bg-gradient-custom {
-  background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary), var(--color-quaternary));
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-tertiary),
+    var(--color-quaternary)
+  );
 }
-
 
 .text-primary {
   color: #06112f;
@@ -20,4 +24,3 @@
 .text-tertiary {
   color: var(--color-tertiary);
 }
-

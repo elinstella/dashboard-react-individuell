@@ -8,6 +8,7 @@ import mockData from './data/mockData.json';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Profiles from './pages/Profiles';
+import AllProfiles from './pages/AllProfiles';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/profiles/:id',
     element: <Profiles />,
+  },
+  {
+    path: '/profiles',
+    element: <AllProfiles />,
   },
 ]);
 

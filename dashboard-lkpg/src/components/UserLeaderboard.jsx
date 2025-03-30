@@ -37,9 +37,9 @@ const UserLeaderboard = ({ usersData }) => {
             <Link
               key={user.id}
               to={`/profiles/${user.id}`}
-              className="block rounded-md hover:bg-gray-100 transition"
+              className="block rounded-md"
             >
-              <li className="flex items-center p-4 border border-gray-200 rounded-md">
+              <li className="flex items-center p-4 bg-white border border-gray-200 rounded-md transition hover:bg-gray-100">
                 <span className="text-lg font-semibold text-gray-600 w-8">
                   {index + 1}.
                 </span>

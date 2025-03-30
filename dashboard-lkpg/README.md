@@ -1,29 +1,56 @@
-# Musiklyssnarstatistik-app
+# 🎧 BeatStats – Musiklyssnarstatistik-app
 
-Den här applikationen gör det möjligt att visa statistik över en individs musiklyssning. Användare kan se data som exempelvis månatliga lyssnare, topplåtar, och andra relevanta musiklyssnarstatistik. Applikationen är utformad för att ge en översiktlig och interaktiv presentation av användarens musiklyssning.
+BeatStats är en React-baserad webapp där du kan utforska statistik över användares musiklyssning. Se topplåtar, streams, användarprofiler, albumomslag direkt från Spotify och mycket mer – allt i en snygg och responsiv gränssnittsdesign.
 
-## Teknologier
+---
 
-- **React**: Ett populärt JavaScript-bibliotek för att bygga användargränssnitt, vilket gör applikationen dynamisk och interaktiv.
-- **Vite**: Ett modernt byggverktyg och utvecklingsserver som gör utvecklingsprocessen snabbare och mer effektiv.
-- **Tailwind CSS**: Ett utility-first CSS-ramverk som används för att skapa responsiva och anpassade användargränssnitt.
-- **Recharts**: Ett bibliotek för att skapa interaktiva och anpassningsbara diagram, som används för att visualisera användarens musikstatistik.
-- **React Router**: Ett bibliotek för att hantera routing i applikationen och navigera mellan olika sidor utan att behöva ladda om sidan.
+## 🚀 Funktioner
 
-## Installation
+- 🔥 **Topplåtar** – Se vilka låtar som streamats mest av alla användare
+- 📊 **Användarprofiler** – Bläddra bland användare och se deras lyssningsdata
+- 💿 **Albumomslag** – Visuellt inslag genom dynamiska omslag från Spotify
+- 📍 **Spotify-integration** – API används för att hämta metadata om låtar
+- 🌐 **Routing** – Navigering mellan sidor utan att ladda om tack vare React Router
 
-För att komma igång med projektet, följ dessa steg:
+---
 
-1. **Klona detta repo**:
+## 🛠️ Teknologier
+
+- ⚛️ **React** – För att bygga det dynamiska gränssnittet
+- ⚡ **Vite** – För blixtsnabb utvecklingsmiljö
+- 🎨 **Tailwind CSS** – För snygg, responsiv och modern styling
+- 🔀 **React Router** – För enkel och effektiv navigation
+- 🎧 **Spotify Web API** – Hämta albumomslag och låtdata
+- 📈 **Recharts** – Visualisera data (ex. streams över tid)
+
+---
+
+## 📦 Installation
+
+### 1. Klona detta repo
+
+````bash
+git clone https://github.com/elinstella/dashboard-react-individuell
+cd dashboard-lkpg
 
 
-2. **Installera beroenden**:
-    Se till att du har [Node.js](https://nodejs.org/) installerat på din dator. 
-    npm install
+
+2. Installera beroenden
+
+Se till att du har Node.js installerat:
+```bash
+npm install
+
+3. Du behöver ett Spotify Developer-konto: https://developer.spotify.com/dashboard för Spotify API.
+
+Lägg till .env-fil
+VITE_SPOTIFY_CLIENT_ID=din-client-id
+VITE_SPOTIFY_CLIENT_SECRET=din-client-secret
 
 
-3. **Starta utvecklingsservern**:
-    När installationen är klar kan du starta utvecklingsservern genom att köra:
-    npm run dev
 
+4. Starta utvecklingsservern
+```bash
+npm run dev
 
+````

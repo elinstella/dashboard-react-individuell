@@ -90,19 +90,22 @@ function TopSongs() {
                       <img
                         src={songObj.image}
                         alt={songObj.song}
-                        className="w-12 h-12 rounded-md object-cover"
+                        className="w-27 h-27 rounded-md object-cover"
                       />
                     )}
                     <div className="text-center w-full">
-                      <span className="font-bold text-black hover:no-underline">
-                        {songObj.song}
-                      </span>{' '}
-                      –{' '}
-                      <span className="font-bold text-black">{songObj.artist}</span>{' '}
-                      <span className="text-purple-600">
+                      <div>
+                        <span className="font-bold text-black hover:no-underline">
+                          {songObj.song}
+                        </span>{' '}
+                        –{' '}
+                        <span className="font-bold text-black">{songObj.artist}</span>
+                      </div>
+                      <div className="text-purple-600 text-sm mt-1">
                         ({songObj.streams} streams)
-                      </span>
+                      </div>
                     </div>
+
                   </div>
                 </Link>
               </li>

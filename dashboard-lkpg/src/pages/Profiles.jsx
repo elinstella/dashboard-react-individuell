@@ -21,6 +21,11 @@ function Profiles() {
     return <div className="p-6 text-red-500">User not found</div>;
   }
 
+  const totalStreams = user.monthlyStreams.reduce(
+    (sum, month) => sum + month.streams,
+    0
+  );
+
   return (
     <>
       <NavHeader />
@@ -45,11 +50,17 @@ function Profiles() {
             <p className="text-gray-700">
               <strong>Location:</strong> {user.location}
             </p>
+            <p className="text-gray-700">
+              <strong>Total Streams:</strong>{' '}
+              <span className="text-purple-600 font-semibold">{totalStreams}</span>
+            </p>
           </div>
 
           {/* Monthly Streams Chart */}
           <div className="mb-10">
-            <h2 className="text-2xl font-bold text-black text-center mb-4">Monthly Streams</h2>
+            <h2 className="text-2xl font-bold text-black text-center mb-4">
+              Monthly Streams
+            </h2>
             <div className="h-96">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={user.monthlyStreams}>
@@ -65,17 +76,19 @@ function Profiles() {
 
           {/* Top Songs */}
           <div>
-            <h2 className="text-2xl font-bold text-black text-center mb-6">Top Songs</h2>
+            <h2 className="text-2xl font-bold text-black text-center mb-6">
+              Top Songs
+            </h2>
             <ul>
               {user.topSongs.map((song, index) => (
                 <li
                   key={index}
                   className="grid grid-cols-[30px_1fr] gap-4 items-start py-3 border-b border-gray-200 text-lg"
                 >
-                  <span className="text-black font-bold text-right">{index + 1}.</span>
+                  <span className="text-black  text-right">{index + 1}.</span>
                   <span className="text-center w-full">
                     <span className="font-bold text-black">{song.song}</span> –{' '}
-                    <span className="font-bold text-black">{song.artist}</span>{' '}
+                    <span className=" text-black">{song.artist}</span>{' '}
                     <span className="text-purple-600">({song.streams} streams)</span>
                   </span>
                 </li>

@@ -63,21 +63,21 @@ export default function NavHeader() {
         <ul className='flex flex-col items-center space-y-6 py-6 text-white text-lg font-semibold'>
           <li>
             <a
-              href='#home'
+              href='/'
               className='nav-link hover:text-tertiary hover:scale-110 transition-all duration-300 transform inline-block'>
               Home
             </a>
           </li>
           <li>
             <a
-              href='#stats'
+              href='top-songs'
               className='nav-link hover:text-tertiary hover:scale-110 transition-all duration-300 transform inline-block'>
-              Stats
+              Top Songs
             </a>
           </li>
           <li>
             <a
-              href='#profile'
+              href='profiles'
               className='nav-link hover:text-tertiary hover:scale-110 transition-all duration-300 transform inline-block'>
               Profile
             </a>

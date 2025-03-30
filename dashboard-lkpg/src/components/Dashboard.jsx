@@ -26,9 +26,15 @@ function Dashboard() {
   return (
     <main className="bg-gray-100 min-h-screen py-12 px-4">
       <div className="bg-white rounded-2xl shadow-md max-w-6xl mx-auto p-8">
+        {/* Huvudrubrik */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-black"> Dashboard</h2>
+          <div className="h-1 w-48 bg-purple-600 mx-auto mt-3 rounded-full" />
+        </div>
+
         {/* Dropdown */}
         <div className="flex flex-col items-center gap-4 pb-12 md:flex-row md:justify-center">
-          <h2 className="text-2xl font-semibold">Users:</h2>
+          <h3 className="text-2xl font-bold text-black">Users:</h3>
           <select
             className="cursor-pointer text-xl border border-gray-300 rounded-md px-3 py-1 shadow-sm"
             onChange={handleUserChange}
@@ -46,11 +52,11 @@ function Dashboard() {
         <div className="flex gap-6 flex-wrap md:flex-nowrap">
           {/* User Info */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-sm w-full md:w-1/3">
-            <h1 className="text-2xl font-bold mb-2 text-gray-800 underline">
+            <h3 className="text-2xl font-bold mb-2 text-gray-800 underline">
               <Link to={`/profiles/${userMusicStats.id}`}>
                 {userMusicStats.name}
               </Link>
-            </h1>
+            </h3>
             <p className="text-gray-600 text-sm">ID: {userMusicStats.id}</p>
             <p className="text-gray-600 text-sm">Email: {userMusicStats.email}</p>
             <p className="text-gray-600 text-sm">
@@ -65,9 +71,9 @@ function Dashboard() {
 
           {/* Monthly Chart */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-sm w-full md:w-2/3">
-            <p className="text-lg font-semibold text-gray-800 mb-4">
+            <h3 className="text-2xl font-bold text-black mb-4">
               Monthly streams this year:
-            </p>
+            </h3>
             <div className="h-96">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={userMusicStats.monthlyStreams}>
@@ -91,9 +97,9 @@ function Dashboard() {
 
           {/* Top Songs */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-sm w-full md:w-1/3">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-2xl font-bold text-black mb-4">
               Top Songs
-            </h2>
+            </h3>
             <ul className="grid grid-cols-1 gap-4">
               {userMusicStats.topSongs.map((song, index) => (
                 <li key={index} className="border-b last:border-b-0 py-3">
@@ -101,7 +107,7 @@ function Dashboard() {
                     {song.song} -{' '}
                     <span className="text-gray-500">{song.artist}</span>
                   </p>
-                  <p className="text-gray-500">Streams: {song.streams}</p>
+                  <p className="text-purple-600">Streams: {song.streams}</p>
                 </li>
               ))}
             </ul>

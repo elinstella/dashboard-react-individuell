@@ -4,6 +4,11 @@ import NavHeader from '../components/NavHeader';
 import mockData from '../data/mockData.json';
 
 function AllProfiles() {
+  // Helper: Beräkna total streams för en user
+  const calculateTotalStreams = (user) => {
+    return user.monthlyStreams.reduce((sum, month) => sum + month.streams, 0);
+  };
+
   return (
     <>
       <NavHeader />
@@ -17,31 +22,37 @@ function AllProfiles() {
 
           {/* Lista */}
           <div className="space-y-2">
-            {mockData.users.map((user) => (
-              <Link
-                key={user.id}
-                to={`/profiles/${user.id}`}
-                className="block hover:bg-gray-50 transition rounded-md"
-              >
-                <div className="flex items-center gap-4 p-4 border-b border-gray-200 pl-4">
-                  {/* Profilbild vertikalt med text, men lite indraget */}
-                  <img
-                    src={user.profilePicture}
-                    alt={`${user.name}'s profile`}
-                    className="w-12 h-12 rounded-full border border-gray-300 shadow-sm"
-                  />
-                  <div>
-                    <p className="text-lg font-medium text-gray-900">
-                      {user.name}{' '}
-                      <span className="text-gray-500">({user.location})</span>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Total Streams: {user.totalStreams}
-                    </p>
+            {mockData.users.map((user) => {
+              const totalStreams = calculateTotalStreams(user);
+
+              return (
+                <Link
+                  key={user.id}
+                  to={`/profiles/${user.id}`}
+                  className="block hover:bg-gray-50 transition rounded-md"
+                >
+                  <div className="flex items-center gap-4 p-4 border-b border-gray-200 pl-4">
+                    <img
+                      src={user.profilePicture}
+                      alt={`${user.name}'s profile`}
+                      className="w-12 h-12 rounded-full border border-gray-300 shadow-sm"
+                    />
+                    <div>
+                      <p className="text-lg font-medium text-gray-900">
+                        {user.name}{' '}
+                        <span className="text-gray-500">({user.location})</span>
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        Total Streams:{' '}
+                        <span className="text-purple-600 font-semibold">
+                          {totalStreams}
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </main>

@@ -32,20 +32,23 @@ const UserLeaderboard = ({ usersData }) => {
           No users to display. Check the console for errors.
         </p>
       ) : (
-        <ul className="space-y-2">
+        <ul className="space-y-2" role="list">
           {users.map((user, index) => (
-            <Link
+            <li
               key={user.id}
-              to={`/profiles/${user.id}`}
-              className="block rounded-md"
+              className="bg-white border border-gray-200 rounded-md transition hover:bg-gray-100"
+              role="listitem"
             >
-              <li className="flex items-center p-4 bg-white border border-gray-200 rounded-md transition hover:bg-gray-100">
+              <Link
+                to={`/profiles/${user.id}`}
+                className="flex items-center p-4"
+              >
                 <span className="text-lg font-semibold text-gray-600 w-8">
                   {index + 1}.
                 </span>
                 <img
                   src={user.profilePicture}
-                  alt={`${user.name}'s profile`}
+                  alt={`Profile picture of ${user.name}`}
                   className="w-10 h-10 rounded-full mr-4"
                 />
                 <div>
@@ -60,8 +63,8 @@ const UserLeaderboard = ({ usersData }) => {
                     </span>
                   </p>
                 </div>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
       )}

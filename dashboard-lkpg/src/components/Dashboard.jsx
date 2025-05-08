@@ -28,14 +28,17 @@ function Dashboard() {
       <div className="bg-white rounded-2xl shadow-md max-w-6xl mx-auto p-8">
         {/* Huvudrubrik */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-black"> Dashboard</h2>
+          <h2 className="text-3xl font-bold text-black">Dashboard</h2>
           <div className="h-1 w-48 bg-purple-600 mx-auto mt-3 rounded-full" />
         </div>
 
-        {/* Dropdown */}
+        {/* Dropdown med label */}
         <div className="flex flex-col items-center gap-4 pb-12 md:flex-row md:justify-center">
-          <h3 className="text-2xl font-bold text-black">Users:</h3>
+          <label htmlFor="user-select" className="text-2xl font-bold text-black">
+            Users:
+          </label>
           <select
+            id="user-select"
             className="cursor-pointer text-xl border border-gray-300 rounded-md px-3 py-1 shadow-sm"
             onChange={handleUserChange}
             value={userMusicStats.id}
@@ -64,17 +67,20 @@ function Dashboard() {
             </p>
             <img
               src={userMusicStats.profilePicture}
-              alt={userMusicStats.name}
+              alt={`Profile picture of ${userMusicStats.name}`}
               className="w-20 h-20 rounded-full mt-4 border border-gray-300 shadow-sm"
             />
           </div>
 
-          {/* Monthly Chart */}
+          {/* Monthly Chart med aria */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-sm w-full md:w-2/3">
-            <h3 className="text-2xl font-bold text-black mb-4">
+            <h3
+              className="text-2xl font-bold text-black mb-4"
+              id="monthly-streams-heading"
+            >
               Monthly streams this year:
             </h3>
-            <div className="h-96">
+            <div className="h-96" role="img" aria-labelledby="monthly-streams-heading">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={userMusicStats.monthlyStreams}>
                   <XAxis dataKey="month" className="text-sm" />
@@ -97,14 +103,12 @@ function Dashboard() {
 
           {/* Top Songs */}
           <div className="bg-gray-50 p-6 rounded-2xl shadow-sm w-full md:w-1/3">
-            <h3 className="text-2xl font-bold text-black mb-4">
-              Top Songs
-            </h3>
+            <h3 className="text-2xl font-bold text-black mb-4">Top Songs</h3>
             <ul className="grid grid-cols-1 gap-4">
               {userMusicStats.topSongs.map((song, index) => (
                 <li key={index} className="border-b last:border-b-0 py-3">
                   <p className="text-gray-700 font-medium">
-                    {song.song} -{' '}
+                    {song.song} –{' '}
                     <span className="text-gray-500">{song.artist}</span>
                   </p>
                   <p className="text-purple-600">Streams: {song.streams}</p>

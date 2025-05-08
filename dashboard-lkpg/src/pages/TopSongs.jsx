@@ -92,8 +92,8 @@ function TopSongs() {
             />
           </div>
 
-          {/* Lista */}
-          <ul role="list">
+          {/* Lista med låtar */}
+          <ul role="list" aria-label="List of top songs">
             {filteredSongs.map((songObj, index) => (
               <li key={songObj.id} role="listitem">
                 <Link
@@ -101,7 +101,10 @@ function TopSongs() {
                   className="grid grid-cols-[30px_1fr] gap-4 items-center py-3 border-b border-gray-200 text-lg hover:bg-gray-100 transition rounded-md px-2"
                   state={{ preview_url: songObj.preview_url }}
                 >
+                  {/* Nummer */}
                   <span className="text-black text-right">{index + 1}.</span>
+
+                  {/* Info */}
                   <div className="flex items-center gap-4 w-full justify-center">
                     {songObj.image && (
                       <img

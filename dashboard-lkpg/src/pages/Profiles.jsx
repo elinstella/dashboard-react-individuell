@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import NavHeader from '../components/NavHeader';
 import mockData from '../data/mockData.json';
@@ -41,7 +41,7 @@ function Profiles() {
           <div className="text-center mb-8">
             <img
               src={user.profilePicture}
-              alt={`${user.name}'s profile`}
+              alt={`Profile picture of ${user.name}`}
               className="w-24 h-24 rounded-full mx-auto mb-4 border border-gray-300 shadow-sm"
             />
             <p className="text-gray-700">
@@ -58,10 +58,13 @@ function Profiles() {
 
           {/* Monthly Streams Chart */}
           <div className="mb-10">
-            <h2 className="text-2xl font-bold text-black text-center mb-4">
+            <h2
+              className="text-2xl font-bold text-black text-center mb-4"
+              id="streams-heading"
+            >
               Monthly Streams
             </h2>
-            <div className="h-96">
+            <div className="h-96" role="img" aria-labelledby="streams-heading">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={user.monthlyStreams}>
                   <XAxis dataKey="month" className="text-sm" />
@@ -79,16 +82,17 @@ function Profiles() {
             <h2 className="text-2xl font-bold text-black text-center mb-6">
               Top Songs
             </h2>
-            <ul>
+            <ul role="list" aria-label="List of top songs">
               {user.topSongs.map((song, index) => (
                 <li
                   key={index}
                   className="grid grid-cols-[30px_1fr] gap-4 items-start py-3 border-b border-gray-200 text-lg"
+                  role="listitem"
                 >
-                  <span className="text-black  text-right">{index + 1}.</span>
+                  <span className="text-black text-right">{index + 1}.</span>
                   <span className="text-center w-full">
                     <span className="font-bold text-black">{song.song}</span> –{' '}
-                    <span className=" text-black">{song.artist}</span>{' '}
+                    <span className="text-black">{song.artist}</span>{' '}
                     <span className="text-purple-600">({song.streams} streams)</span>
                   </span>
                 </li>

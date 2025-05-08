@@ -11,7 +11,7 @@ function SongDetail() {
   const [albumImage, setAlbumImage] = useState(null);
   const [spotifyUrl, setSpotifyUrl] = useState(null);
 
-  // Hämta unika låtar
+  // Skapa unik lista av låtar
   const songMap = new Map();
   mockData.users.forEach((user) => {
     user.topSongs.forEach((song) => {
@@ -36,7 +36,7 @@ function SongDetail() {
     )
   );
 
-  // Hämta Spotify-data
+  // Hämta Spotify-albumdata
   useEffect(() => {
     const fetchSpotifyData = async () => {
       if (!selectedSong) return;
@@ -87,7 +87,7 @@ function SongDetail() {
                 albumImage ??
                 `https://source.unsplash.com/400x400/?music,album,covers&sig=${selectedSong.id}`
               }
-              alt="Album cover"
+              alt={`Album cover for ${selectedSong.song} by ${selectedSong.artist}`}
               className="w-60 h-60 rounded-lg shadow object-cover"
             />
           </div>
@@ -111,23 +111,33 @@ function SongDetail() {
             Total Streams: {selectedSong.streams}
           </div>
 
-          {/* Användare */}
-          <h3 className="text-xl font-bold text-black mb-4">Used by:</h3>
-          <ul className="space-y-4">
+          {/* Användarlista */}
+          <h3
+            className="text-xl font-bold text-black mb-4"
+            id="users-heading"
+          >
+            Used by:
+          </h3>
+          <ul
+            className="space-y-4"
+            role="list"
+            aria-labelledby="users-heading"
+          >
             {usersWithThisSong.map((user) => (
               <li
                 key={user.id}
                 className="flex items-center gap-4 bg-gray-50 p-4 rounded-md"
+                role="listitem"
               >
                 <img
                   src={user.profilePicture}
-                  alt={user.name}
+                  alt={`Profile picture of ${user.name}`}
                   className="w-12 h-12 rounded-full border"
                 />
                 <div>
                   <Link
                     to={`/profiles/${user.id}`}
-                    className="text-lg font-semibold  hover:underline"
+                    className="text-lg font-semibold hover:underline"
                   >
                     {user.name}
                   </Link>

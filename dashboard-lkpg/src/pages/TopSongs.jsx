@@ -77,9 +77,13 @@ function TopSongs() {
             <div className="h-1 w-48 bg-purple-600 mx-auto mt-3 rounded-full" />
           </div>
 
-          {/* Sökfält */}
+          {/* Sökfält med tillgänglig etikett */}
           <div className="mb-6 text-center">
+            <label htmlFor="search" className="sr-only">
+              Search songs or artists
+            </label>
             <input
+              id="search"
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -89,9 +93,9 @@ function TopSongs() {
           </div>
 
           {/* Lista */}
-          <ul>
+          <ul role="list">
             {filteredSongs.map((songObj, index) => (
-              <li key={songObj.id}>
+              <li key={songObj.id} role="listitem">
                 <Link
                   to={`/songs/${songObj.id}`}
                   className="grid grid-cols-[30px_1fr] gap-4 items-center py-3 border-b border-gray-200 text-lg hover:bg-gray-100 transition rounded-md px-2"
@@ -102,7 +106,7 @@ function TopSongs() {
                     {songObj.image && (
                       <img
                         src={songObj.image}
-                        alt={songObj.song}
+                        alt={`Album cover for ${songObj.song} by ${songObj.artist}`}
                         className="w-27 h-27 rounded-md object-cover"
                       />
                     )}

@@ -6,12 +6,15 @@ import NavHeader from '../components/NavHeader';
 import Footer from '../components/Footer';
 
 function SongDetail() {
+  // 🔢 Hämta ID:t från URL-parametern
   const { id } = useParams();
   const songId = parseInt(id);
+
+  // 🎨 State för albumomslag och Spotify-länk
   const [albumImage, setAlbumImage] = useState(null);
   const [spotifyUrl, setSpotifyUrl] = useState(null);
 
-  // Skapa unik lista av låtar
+  // 🗺️ Skapa en Map för att identifiera unika låtar och summera streams
   const songMap = new Map();
   mockData.users.forEach((user) => {
     user.topSongs.forEach((song) => {
@@ -25,10 +28,14 @@ function SongDetail() {
     });
   });
 
+  // 🎵 Skapa en lista med ID för varje unik låt
   const allSongs = Array.from(songMap.values());
   const songsWithId = allSongs.map((song, index) => ({ ...song, id: index + 1 }));
+
+  // 🎯 Hitta den valda låten baserat på ID från URL
   const selectedSong = songsWithId.find((song) => song.id === songId);
 
+  // 👥 Filtrera användare som har denna låt i sin topplista
   const usersWithThisSong = mockData.users.filter((user) =>
     user.topSongs.some(
       (song) =>
@@ -36,12 +43,15 @@ function SongDetail() {
     )
   );
 
-  // Hämta Spotify-albumdata
+  // 🌐 Hämta metadata från Spotify för albumomslag och extern länk
   useEffect(() => {
     const fetchSpotifyData = async () => {
       if (!selectedSong) return;
 
+      // 🔑 Hämta token
       const token = await getSpotifyToken();
+
+      // 🔍 Bygg sökfråga och API-url
       const query = encodeURIComponent(`track:${selectedSong.song} artist:${selectedSong.artist}`);
       const url = `https://api.spotify.com/v1/search?q=${query}&type=track&limit=5`;
 
@@ -53,6 +63,7 @@ function SongDetail() {
         const data = await res.json();
         const firstTrack = data.tracks?.items?.[0];
 
+        // 🖼️ Spara bild och Spotify-länk om de finns
         if (firstTrack) {
           setAlbumImage(firstTrack.album.images[0]?.url ?? null);
           setSpotifyUrl(firstTrack.external_urls.spotify ?? null);
@@ -65,6 +76,7 @@ function SongDetail() {
     fetchSpotifyData();
   }, [selectedSong]);
 
+  // 🚨 Om låten inte hittas
   if (!selectedSong) {
     return <div className="p-6 text-red-500">Song not found</div>;
   }
@@ -74,13 +86,13 @@ function SongDetail() {
       <NavHeader />
       <main className="bg-gray-100 min-h-screen py-12 px-4">
         <div className="bg-white rounded-2xl shadow-md max-w-3xl mx-auto p-8">
-          {/* Titel */}
+          {/* 🎵 Låttitel och artist */}
           <h1 className="text-3xl font-bold text-black text-center">
             {selectedSong.song}
           </h1>
           <p className="text-center text-gray-600 mb-4">by {selectedSong.artist}</p>
 
-          {/* Album-bild */}
+          {/* 🎨 Albumomslag (från Spotify eller fallback-bild) */}
           <div className="flex justify-center mb-4">
             <img
               src={
@@ -92,7 +104,7 @@ function SongDetail() {
             />
           </div>
 
-          {/* Spotify-länk */}
+          {/* 🔗 Länk till Spotify */}
           {spotifyUrl && (
             <div className="text-center mb-6">
               <a
@@ -106,12 +118,12 @@ function SongDetail() {
             </div>
           )}
 
-          {/* Streams */}
+          {/* 🔢 Antal streams */}
           <div className="text-center text-purple-600 font-semibold text-lg mb-6">
             Total Streams: {selectedSong.streams}
           </div>
 
-          {/* Användarlista */}
+          {/* 👥 Lista över användare som har denna låt */}
           <h3
             className="text-xl font-bold text-black mb-4"
             id="users-heading"

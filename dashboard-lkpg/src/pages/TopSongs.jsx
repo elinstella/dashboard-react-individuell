@@ -7,11 +7,11 @@ import { getSpotifyToken } from '../api/spotifyToken';
 
 function TopSongs() {
   const [songsWithImages, setSongsWithImages] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       const token = await getSpotifyToken();
-
       const songMap = new Map();
 
       mockData.users.forEach((user) => {
@@ -49,7 +49,7 @@ function TopSongs() {
           return {
             ...song,
             image: track?.album?.images?.[0]?.url ?? null,
-            preview_url: track?.preview_url ?? null, // 🔥 Lägg till denna!
+            preview_url: track?.preview_url ?? null,
           };
         })
       );
@@ -60,6 +60,11 @@ function TopSongs() {
 
     fetchData();
   }, []);
+
+  const filteredSongs = songsWithImages.filter((song) =>
+    song.song.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <>
@@ -72,19 +77,27 @@ function TopSongs() {
             <div className="h-1 w-48 bg-purple-600 mx-auto mt-3 rounded-full" />
           </div>
 
+          {/* Sökfält */}
+          <div className="mb-6 text-center">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search by song or artist"
+              className="px-4 py-2 w-full max-w-md rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            />
+          </div>
+
           {/* Lista */}
           <ul>
-            {songsWithImages.map((songObj, index) => (
+            {filteredSongs.map((songObj, index) => (
               <li key={songObj.id}>
                 <Link
                   to={`/songs/${songObj.id}`}
                   className="grid grid-cols-[30px_1fr] gap-4 items-center py-3 border-b border-gray-200 text-lg hover:bg-gray-100 transition rounded-md px-2"
-                  state={{ preview_url: songObj.preview_url }} // 👈 Skicka vidare
+                  state={{ preview_url: songObj.preview_url }}
                 >
-                  {/* Ranking */}
                   <span className="text-black text-right">{index + 1}.</span>
-
-                  {/* Info */}
                   <div className="flex items-center gap-4 w-full justify-center">
                     {songObj.image && (
                       <img
@@ -105,7 +118,6 @@ function TopSongs() {
                         ({songObj.streams} streams)
                       </div>
                     </div>
-
                   </div>
                 </Link>
               </li>
